@@ -1,12 +1,12 @@
 # Azure PowerShell Script
 We will create a VM using PowerShell then Configure the server
 ### Create Virtual Machine Using PowerShell
-`set-variable -name "USERNAME" -value "Your_UserName"
-Set-Variable -name "PASSWORD" -value "Password"
+`set-variable -name "USERNAME" -value "Your_UserName" <br/>
+Set-Variable -name "PASSWORD" -value "Password"  <br/>
 New-AzResourceGroup -Name Your_ResourceGroup_Name -Location EastUS2
 az vm create --name VM_Name --resource-group Your_ResourceGroup_Name --image 'Win2016Datacenter' --size Standard_B1s --location EastUS2 --admin-username $USERNAME --admin-password $PASSWORD --zone 2`
 ### WebServerConfiguration
-`packages:
+` packages:
   - nginx
   - nodejs
   - npm
@@ -42,4 +42,4 @@ runcmd:
   - cd "/home/hauser/myapp"
   - npm init
   - npm install express -y
-  - nodejs index.js`
+  - nodejs index.js `
